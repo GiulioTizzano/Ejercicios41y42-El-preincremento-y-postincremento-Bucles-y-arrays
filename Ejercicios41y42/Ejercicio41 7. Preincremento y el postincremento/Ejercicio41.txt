@@ -1,0 +1,7 @@
+Ejercicio41:
+
+Explique la diferencia entre pre-incremento y el pos-incremento
+
+La diferencia entre el pre-incremento y el pos-incremento es que el pre-incremento devuelve el valor 
+de la variable incrementada y el pos-incremento devuelve el valor original de la variable antes de 
+ser incrementada.

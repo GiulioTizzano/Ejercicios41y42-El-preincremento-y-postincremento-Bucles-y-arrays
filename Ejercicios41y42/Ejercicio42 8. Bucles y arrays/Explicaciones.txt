@@ -1,0 +1,171 @@
+1. Primer Código:
+ 
+public class Principal{
+	public static void main(String[] args)
+	{
+		int i = 1;
+		while(i <= 10) System.out.println(i++);
+		}
+	}
+
+-En este primer programa se declara una variable de tipo entero (int) llamado i. Se empieza a iterar con
+un while loop y el valor de i es impreso en pantalla hasta que i sea = 10 donde se ejecuta la ultima 
+iteracion. 
+
+2. Segundo Código:
+
+public class Principal{
+	public static void main(String[] args)
+	{
+		for(int i = 1; i <= 10; i++) System.out.
+			println(i);
+	}
+} 
+
+-En este segundo programa se usa un for loop con el inicializador
+en i = 1 y se imprime en pantalla el valor de i hasta que el i-ésimo
+sea igual a 10, pasado el valor de diez se rompe la iteración.
+
+3. Tercer Código:
+
+public class Principal{
+public static void main(String[] args)
+{
+System.out.println("Ejecutándose primer bucle while...");
+int i = 1;
+while(i <= 10) System.out.println(i++);
+System.out.println("Ejecutándose primer bucle do-while...");
+i = 1;
+do System.out.println(i++); while(i <= 10);
+System.out.println("Ejecutándose segundo bucle while...");
+i = 1;
+while(i < 0) System.out.println(i++);
+System.out.println("Ejecutándose segundo bucle do-while...");
+i = 1;
+do System.out.println(i++); while(i < 0);
+}
+}
+ 
+
+-En este tercer programa se ejecutan dos do-while y while loops 
+diferentes. En todos los bucles se declara una variable i que es definido
+con el valor de 1. Posteriormente en el primer bucle while, se puede 
+observar como se imprimen paralelamente en pantalla las declaraciones
+"Ejecutándose primer/segundo bucle (do)while". En el primer bucle while se 
+imprime mediante el post-incremento hasta que el valor de i = 10
+donde al siguente valor el bucle se rompe. En el segundo bucle se
+define un do while donde se ejecuta el código antes de confirmar que la
+condicion sea verdadera. Mientras i <= 10, entonces el bucle 
+imprime en pantalla el valor pre-incrementado de i en pantalla. 
+En el tercer bucle, que viene siendo un while loop, al ser un while 
+checkea la condición inicial que en este caso es (i < 0) => (1 < 0), que
+es completamente falso, por tanto como no se cumple la condición no 
+imprime en pantalla el post-incremento. En el último bucle, se usa un
+do-while loop así que, como en los while loops primero se ejecuta la 
+declaración en la primera iteración, pues se imprime el valor 1 y luego
+en la segunda iteración se checkea la condición cuyo valor de verdad
+es falso, y se rompe la iteración.  
+
+4. Cuarto Código:
+
+public class Principal{
+public static void main(String[] args)
+{
+int i = 1;
+int suma = 0;
+while(i <= 100){
+suma = suma + i;
+i++;
+}
+System.out.println(suma);
+}
+}
+
+-En este cuarto programa se declaran dos variables de tipo entero 
+i y suma, con i = 1 y suma = 0. Luego se crea un while loop, donde
+la condición es que se ejecute la declaración mientras i sea igual o
+menor a 100. Mientras eso se cumpla lo que se hace en la declaración
+es que a la variable suma se le redefine con la suma del valor de suma
+más el valor i-ésimo de i y se le realiza un post-incremento en cada
+iteración y se imprime el resultado de suma en pantalla.
+
+5. Quinto Código:
+
+public class Principal{
+public static void main(String[] args)
+{
+int suma = 0;
+for(int i = 1; i <= 100; i++){
+suma = suma + i;
+}
+System.out.println(suma);
+}
+}
+
+-Este quinto programa es equivalente al del programa 4, lo único que cambia es 
+que se usa un for loop en vez de un while loop, por lo que se define el valor
+de i, la condición y el tipo de iteración en el mismo parenesis del for loop. 
+Se ejecuta el for loop hasta que se cumpla la condición. Mientras se cumpla
+se imprime en pantalla el valor de suma.
+
+6. Sexto Código:
+
+public class Principal
+{
+public static void main(String[] args)
+{
+int[] x = new int[10];
+x[0] = 3;
+x[1] = 6;
+x[2] = 8;
+int j = 0;
+System.out.println(x[j++]);
+System.out.println("BUCLE WHILE");
+System.out.println("===========");
+int i = 0;
+while(i < x.length) System.out.println(x[i++]);
+System.out.println("\nBUCLE FOR");
+System.out.println("==========");
+for(int k = 0; k < x.length; k++) System.out.println(
+x[k]);
+System.out.println("\nBUCLE DO");
+System.out.println("=========");
+int l = 0;
+do System.out.println(x[l++]);while(l < x.length - 1)
+;
+}
+}
+
+-En este programa se crea una array llamado x que contiene 11 índices diferentes
+disponibles para poder almacenar un entero. En los tres primeros índices se
+guardan los valores 3, 6 y 8. Luego Se declara una variable i = 0, y
+dentro del while loop sea fuerza la condición de que i tiene que ser 
+estrictamente menor que que en ancho del array. Si dicha condición se cumple
+entonces se imprime en pantalla el siguente índice dentro del array. En el 
+siguente bloque de código se define un for loop cuyo trabajo es parsear el
+array de la misma forma que el while loop. Es decir, se imprime en pantalla
+con tal de que el valor de la variable k sea estricamente menor al ancho
+del array en sí. Esta vez se imprimen los términos k-ésimos que resulta en lo
+mismo que el while loop. Finalmente tenemos el do-while loop que hace 
+exactamente lo mismo que los bucles anteriores, lo único que imprime x.length
+ - 1 términos, por tanto va a aparecer un término menos en el impreso de 
+pantalla del do-while.
+
+7. Si se intenta acceder a una posición mayor o igual, entonces en todos los
+bucles propuestos en este programa el programa retorna FALSO como valor
+y por tanto se romple el bucle.
+8. Porque sino el do while imprimiría una posición más 
+9. La diferencia entre cuando saber usar un while y un do loop es bastante sútil.
+El do-while loop se usa cuando sabes que al menos estamos seguros que queramos
+que el bucle se ejecute  por lo menos una vez. En los todos los demás casos,
+podemos usar perfectamente un while loop. 
+
+
+
+
+
+
+
+
+
+
